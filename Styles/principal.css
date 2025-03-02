@@ -1,0 +1,122 @@
+header{
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+}
+
+.logo-github {
+    img{width: 50px; height: 50px;}
+}
+
+
+body {
+    background-color: #111111;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.title-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Background*/
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+    pointer-events: none;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+/*h1*/
+.page-name{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 6em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+    typing 2s, 
+    cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+
+@keyframes typing{
+    from {width: 0;}
+}
+
+/*Skills Slider*/
+.skills-slider{
+    height: 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 2em;
+    color: white;
+}
+
+.skills-slider div{
+    color: white;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 2px 15px;
+    text-align: center;
+
+}
+
+.skills-slider-text1{
+    background: red;
+    animation: skills-slider 5s linear infinite;
+}
+
+.skills-slider-text2{
+    background: blue;
+}
+
+.skills-slider-text3{
+    background: rgb(5, 122, 5);
+}
+
+@keyframes skills-slider{
+    0% {margin-top: -300px;}
+    5% {margin-top: -200px;}
+    33% {margin-top: -200px;}
+    38% {margin-top: -100px;}
+    66% { margin-top: -100px;}
+    71% {margin-top: 0px;}
+    100% { margin-top: 0px;}
+
+}
+
